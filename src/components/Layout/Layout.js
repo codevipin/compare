@@ -2,13 +2,15 @@ import React from 'react';
 
 import Aux from '../../hoc/Aux';
 
-const Layout = ( props ) => {
+const layout = ( props ) => {
 	return (
 		<Aux>
-			<div>Filters</div>
-			<div>Compare table</div>
+			<div>Navigation</div>
+			<main className="Content">
+				{props.children}
+			</main>
 		</Aux>
 	)
 }
 
-export default Layout;
+export default layout;
