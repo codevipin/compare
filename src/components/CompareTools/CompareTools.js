@@ -5,11 +5,13 @@ import CompareFeatures from './CompareFeatures/CompareFeatures';
 import CompareFilters from './CompareFilters/CompareFilters';
 
 const compareTools = ( props ) => {
-
+console.log(props)
 	return (
 		<Aux>
-			<CompareFilters />
-			<CompareFeatures />
+			<CompareFilters
+				filters={props.selectedFilters}
+				toggleFilter={props.updateFilterHandler} />
+			<CompareFeatures features={props.selectedFeatures} />
 		</Aux>
 	)
 }

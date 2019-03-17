@@ -1,0 +1,2 @@
+export const TOOGLE_FILTER = 'TOOGLE_FILTER';
+export const SELECT_FEATURE = 'SELECT_FEATURE';
