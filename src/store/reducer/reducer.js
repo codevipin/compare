@@ -32,7 +32,8 @@ const initialState = {
 			value: 'Power Features',
 			checked: true
 		}
-	]
+	],
+	brands: []
 }
 
 const updateObject = (oldObject, updatedValues) => {
@@ -54,7 +55,8 @@ const updateFilter = (state, action) => {
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-    	case actionTypes.TOOGLE_FILTER: return updateFilter(state, action)
+    	case actionTypes.TOOGLE_FILTER: return updateFilter(state, action);
+    	case actionTypes.FETCH_BRANDS: return updateObject(state, {brands: action.brands})
     }
     return state;
 };

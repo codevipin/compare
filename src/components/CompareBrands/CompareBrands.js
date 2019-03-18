@@ -60,7 +60,7 @@ const CompareBrands = ( props ) => {
 			<Grid container>
 				<Grid item>
 					
-					<SelectBrand brands={brands} products={products} />
+					<SelectBrand brands={props.brands} products={products} />
 				</Grid>	
 			</Grid>
 		</div>

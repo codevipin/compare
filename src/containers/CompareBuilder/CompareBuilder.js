@@ -22,6 +22,11 @@ const styles = theme => ({
 
 class CompareBuilder extends Component {
 
+	componentDidMount() {
+		console.log("fetch the brands")
+		this.props.fetchBrands('http://localhost:3000/brands');
+	}
+
 	render() {
 		const { classes } = this.props;
 		return (
@@ -34,7 +39,7 @@ class CompareBuilder extends Component {
 							updateFilterHandler={this.props.onFilterToggle} />
 					</Grid>
 					<Grid item xs={8}>
-						<CompareBrands />
+						<CompareBrands brands={this.props.brands} />
 					</Grid>
 				</Grid>
 			</div>
@@ -50,12 +55,14 @@ const mapStateToProps = state => {
 	console.log(state.filters)
     return {
         selectedFilters: state.filters,
+        brands: state.brands
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFilterToggle: (index, flag) => dispatch(actions.toogleFilter(index, flag))
+        onFilterToggle: (index, flag) => dispatch(actions.toogleFilter(index, flag)),
+        fetchBrands:(url) => dispatch(actions.fetchBrands(url))
     };
 };
 
