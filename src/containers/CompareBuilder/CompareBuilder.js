@@ -34,7 +34,6 @@ class CompareBuilder extends Component {
 				<Grid container>
 					<Grid item xs={4}>
 						<CompareTools
-							selectedFeatures="{this.props.selectedFeatures}"
 							selectedFilters={this.props.selectedFilters}
 							updateFilterHandler={this.props.onFilterToggle} />
 					</Grid>

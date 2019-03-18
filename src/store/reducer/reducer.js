@@ -15,7 +15,7 @@ const initialState = {
 		{
 			id: 'camera_features',
 			value: 'Camera Features',
-			checked: false
+			checked: true
 		},
 		{
 			id: 'display_features',

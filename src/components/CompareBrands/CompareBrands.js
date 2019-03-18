@@ -19,24 +19,7 @@ const styles = theme => ({
 
 const CompareBrands = ( props ) => {
 	const { classes } = props;
-	const brands = [
-		{
-			id: 'google',
-			name: 'Google'
-		},
-		{
-			id: 'aiek',
-			name: 'AIEK'
-		},
-		{
-			id: 'i_life',
-			name: 'I Life'
-		},
-		{
-			id: 'meizu',
-			name: 'Meizu'
-		},
-	];
+	//Dummy products array for products
 	const products = [
 		{
 			id: 'xyz',
@@ -59,7 +42,6 @@ const CompareBrands = ( props ) => {
 		<div className={classes.root}>
 			<Grid container>
 				<Grid item>
-					
 					<SelectBrand brands={props.brands} products={products} />
 				</Grid>	
 			</Grid>
